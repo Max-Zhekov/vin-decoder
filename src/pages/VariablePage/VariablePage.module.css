@@ -1,0 +1,97 @@
+.variable-page {
+  padding: 24px 0;
+}
+
+.variable-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  text-decoration: none;
+  color: inherit;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 8px 10px;
+  border-radius: 10px;
+
+  transition: background-color 0.15s ease;
+}
+
+.variable-page__back:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.variable-page__status {
+  margin-top: 14px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.variable-page__card {
+  margin-top: 14px;
+  padding: 16px;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.variable-page__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.variable-page__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.variable-page__id {
+  font-size: 12px;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+.variable-page__desc {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.9;
+  word-break: break-word;
+}
+
+.variable-page__desc ul,
+.variable-page__desc ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.variable-page__desc li {
+  margin: 6px 0;
+}
+
+.variable-page__desc p {
+  margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .variable-page__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .variable-page__id {
+    white-space: normal;
+  }
+}
