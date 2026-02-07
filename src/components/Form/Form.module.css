@@ -1,0 +1,81 @@
+.vin-form {
+  display: grid;
+  gap: 14px;
+  max-width: 560px;
+}
+
+.vin-form__field {
+  display: grid;
+  gap: 8px;
+}
+
+.vin-form__label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.vin-form__input {
+  height: 44px;
+  padding: 0 12px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: #fff;
+
+  font-size: 14px;
+  outline: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.vin-form__input:focus {
+  border-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.vin-form__input[aria-invalid="true"] {
+  border-color: rgba(220, 38, 38, 0.6);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.vin-form__error {
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgb(220, 38, 38);
+}
+
+.vin-form__button {
+  height: 44px;
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+
+  transition:
+    transform 0.06s ease,
+    opacity 0.15s ease;
+}
+
+.vin-form__button:hover {
+  opacity: 0.92;
+}
+
+.vin-form__button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .vin-form {
+    max-width: 100%;
+  }
+}
