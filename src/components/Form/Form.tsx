@@ -41,11 +41,10 @@ const Form = ({ onDecode }: Props) => {
   return (
     <form onSubmit={handleSubmit} noValidate className={styles["vin-form"]}>
       <div className={styles["vin-form__field"]}>
-        <label className={styles["vin-form__label"]} htmlFor="vin">
-          Enter VIN code
-        </label>
+        <label className={styles["vin-form__label"]}>Enter VIN code</label>
 
         <input
+          id="input"
           className={styles["vin-form__input"]}
           type="text"
           value={vinInput}

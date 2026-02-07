@@ -1,9 +1,9 @@
 import styles from "./HomePage.module.css";
-import { DecodeResult, Form } from "../../components";
+import { DecodeResult, Form, DecodeHistory } from "../../components";
 import { useVinDecoder } from "../../hooks/useVinDecoder";
 
 const HomePage = () => {
-  const { data, loading, error, decode } = useVinDecoder();
+  const { data, loading, error, decode, history } = useVinDecoder();
 
   const handleDecode = (vin: string) => {
     decode(vin);
@@ -13,6 +13,8 @@ const HomePage = () => {
     <div className={styles.wrapper}>
       <h1>VIN DECODER</h1>
       <Form onDecode={handleDecode} />
+
+      <DecodeHistory items={history} onSelect={decode} />
 
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}

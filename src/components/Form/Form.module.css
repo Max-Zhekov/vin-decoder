@@ -1,17 +1,20 @@
 .vin-form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
   max-width: 560px;
 }
 
 .vin-form__field {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
 .vin-form__label {
   font-size: 14px;
   font-weight: 600;
+  text-align: center;
 }
 
 .vin-form__input {
