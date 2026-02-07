@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./components";
 import HomePage from "./pages/HomePage/HomePage";
-import VariablesPage from "./pages/VariablesPage";
+import VariablesPage from "./pages/VariablesPage/VariablesPage";
 import VariablePage from "./pages/VariablePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
