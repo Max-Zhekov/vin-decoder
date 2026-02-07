@@ -1,54 +1,100 @@
-# React + TypeScript + Vite
+# VIN Decoder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for decoding vehicle VIN codes using the public NHTSA
+(vPIC) API.
 
-Currently, two official plugins are available:
+👉 **Live demo:**\
+https://vin-decoder-for-abp.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+------------------------------------------------------------------------
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This application allows users to enter a vehicle VIN code, decode it,
+and view vehicle characteristics in a clear and user-friendly format.\
+It also includes a page with all available vehicle variables and a
+separate page with detailed information for each variable.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+The project is implemented as a Single Page Application (SPA) using
+React.
+
+------------------------------------------------------------------------
+
+## Features
+
+### VIN Decoder
+
+-   VIN code input with basic validation (length and allowed characters)
+-   Fetching decoded data from the NHTSA API
+-   Displaying API response messages and decoded vehicle characteristics
+-   History of the last three decoded VIN codes
+-   Ability to re-apply a VIN from history
+
+### Variables
+
+-   Page with a list of all available vehicle variables from the NHTSA
+    API
+-   Navigation to a dedicated page for each variable by its ID
+-   Detailed variable description display
+-   Data caching using TanStack Query
+
+### Additional
+
+-   Loading and error state handling
+-   Responsive, minimalist layout (420--1440 px)
+-   Client-side routing
+-   Custom 404 page
+
+------------------------------------------------------------------------
+
+## Tech Stack
+
+-   React
+-   TypeScript
+-   React Router
+-   TanStack Query
+-   Vite
+-   CSS Modules (BEM methodology)
+-   API: https://vpic.nhtsa.dot.gov/api/
+
+------------------------------------------------------------------------
+
+## Local Setup
+
+1.  Clone the repository:
+
+``` bash
+git clone <repository-url>
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2.  Navigate to the project directory:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+``` bash
+cd vin-decoder
 ```
+
+3.  Install dependencies:
+
+``` bash
+npm install
+```
+
+4.  Start the development server:
+
+``` bash
+npm run dev
+```
+
+5.  Open in your browser:
+
+```{=html}
+<!-- -->
+```
+    http://localhost:5173
+
+------------------------------------------------------------------------
+
+## Notes
+
+The application is deployed on Netlify and uses client-side routing
+without a backend.
